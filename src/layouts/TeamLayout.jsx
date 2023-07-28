@@ -1,5 +1,12 @@
+import { Outlet } from 'react-router-dom'
+
 function TeamLayout() {
-    return <h1>TeamLayout</h1>
+    return (
+        <>
+            <h2> Team Layout</h2>
+            <Outlet />
+        </>
+    )
 }
 
 export default TeamLayout
