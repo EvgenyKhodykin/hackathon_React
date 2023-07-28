@@ -6,7 +6,7 @@ function MainPage() {
         <div className='container-xl mt-5'>
             <img src={result} alt='resultSchool' style={{ width: '300px', height: '300px' }} />
             <p className=' mt-5'>
-                Добро пожаловать на страницу группы 91 курса Junior Frontend Developer в
+                Добро пожаловать на страницу 91-й группы курса Junior Frontend Developer в
                 ResultSchool! Здесь собралась команда единомышленников и, в первую очередь,
                 увлёченных web разработкой людей. В рамках данного практического задания мы
                 постарались воплотить в проекте те знания, которые кропотливо получали в течение
