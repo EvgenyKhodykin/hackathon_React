@@ -1,5 +1,5 @@
 function TeamPage() {
-    return <h1>TeamPage</h1>
+    return <div className='container-xl'>TeamPage</div>
 }
 
 export default TeamPage
