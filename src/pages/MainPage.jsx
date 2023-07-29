@@ -7,7 +7,7 @@ function MainPage() {
         <>
             <Breadcrumbs />
             <div className='container-xl mt-5'>
-                <a href='https://result.school/' title='Result School Link'>
+                <a href='https://result.school/' title='link to ResulSchool page'>
                     <img
                         src={result}
                         className='resultImage'

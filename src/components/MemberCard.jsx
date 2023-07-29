@@ -1,4 +1,6 @@
-function MemberCard({ name, photo, age, role, about }) {
+import { Link } from 'react-router-dom'
+
+function MemberCard({ name, photo, age, role, about, _id }) {
     const myStyle = {
         backgroundImage: `url(${photo.main})`
     }
@@ -17,9 +19,9 @@ function MemberCard({ name, photo, age, role, about }) {
                     <h6>{age} лет</h6>
                     <p className='card-text mt-4'>{about}</p>
                     <div className='card-navigate'>
-                        <a href='#' className={`btn btn-${handleClassName(role)}`}>
+                        <Link to={`/team/${_id}`} className={`btn btn-${handleClassName(role)}`}>
                             Открыть
-                        </a>
+                        </Link>
                         <a href='#' className={`btn btn-${handleClassName(role)}`}>
                             <i className='bi bi-bookmark'></i>
                         </a>

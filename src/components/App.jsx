@@ -5,6 +5,7 @@ import TeamLayout from '../layouts/TeamLayout'
 import BookmarksPage from '../pages/BookmarksPage'
 import MemberPage from '../pages/MemberPage'
 import TeamPage from '../pages/TeamPage'
+import ProtectedRoute from './ProtectedRoute'
 
 function App() {
     return (
@@ -14,7 +15,9 @@ function App() {
                 <Route path='/' element={<MainPage />} />
                 <Route path='team' element={<TeamLayout />}>
                     <Route index element={<TeamPage />} />
-                    <Route path=':userId' element={<MemberPage />} />
+                    <Route element={<ProtectedRoute />}>
+                        <Route path=':userId' element={<MemberPage />} />
+                    </Route>
                 </Route>
                 <Route path='bookmarks' element={<BookmarksPage />} />
                 <Route path='*' element={<Navigate to='/' />} />
