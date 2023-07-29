@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 function MemberCard({ name, photo, age, role, about, _id }) {
     const [isFavorite, setIsFavorite] = useState(false)
+
     const myStyle = {
         backgroundImage: `url(${photo.main})`
     }
@@ -27,6 +28,11 @@ function MemberCard({ name, photo, age, role, about, _id }) {
         }
     }
 
+    const handleBookmarkClassName = () => {
+        if (!isFavorite) return 'bi bi-bookmark'
+        return 'bi bi-bookmark-check'
+    }
+
     return (
         <div>
             <span className={`badge bg-${handleClassName(role)}`}>{role}</span>
@@ -44,7 +50,7 @@ function MemberCard({ name, photo, age, role, about, _id }) {
                             className={`btn btn-${handleClassName(role)}`}
                             onClick={() => handleToggleBookmark(_id)}
                         >
-                            <i className='bi bi-bookmark'></i>
+                            <i className={handleBookmarkClassName()}></i>
                         </button>
                     </div>
                 </div>
