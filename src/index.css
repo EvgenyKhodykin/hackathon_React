@@ -23,3 +23,13 @@
     width: 700px;
     justify-content: space-between;
 }
+
+.card-img-top {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.card {
+    width: 300px;
+}

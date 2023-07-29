@@ -34,14 +34,14 @@ const fetchAll = () =>
     new Promise(resolve => {
         window.setTimeout(function () {
             resolve(members)
-        }, 1500)
+        }, 1000)
     })
 
 const getById = id =>
     new Promise(resolve => {
         window.setTimeout(function () {
             resolve(JSON.parse(localStorage.getItem('members')).find(member => member._id === id))
-        }, 1500)
+        }, 1000)
     })
 
 const API = {
