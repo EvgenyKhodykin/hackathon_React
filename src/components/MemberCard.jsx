@@ -1,12 +1,30 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function MemberCard({ name, photo, age, role, about, _id }) {
+    const [isFavorite, setIsFavorite] = useState(false)
     const myStyle = {
         backgroundImage: `url(${photo.main})`
     }
 
+    useEffect(() => {
+        if (localStorage.getItem(_id)) {
+            setIsFavorite(true)
+        }
+    }, [_id])
+
     const handleClassName = role => {
         return role === 'Team Leader' ? 'danger' : 'success'
+    }
+
+    const handleToggleBookmark = id => {
+        if (!isFavorite) {
+            localStorage.setItem(id, id)
+            setIsFavorite(true)
+        } else {
+            localStorage.removeItem(id)
+            setIsFavorite(false)
+        }
     }
 
     return (
@@ -22,9 +40,12 @@ function MemberCard({ name, photo, age, role, about, _id }) {
                         <Link to={`/team/${_id}`} className={`btn btn-${handleClassName(role)}`}>
                             Открыть
                         </Link>
-                        <a href='#' className={`btn btn-${handleClassName(role)}`}>
+                        <button
+                            className={`btn btn-${handleClassName(role)}`}
+                            onClick={() => handleToggleBookmark(_id)}
+                        >
                             <i className='bi bi-bookmark'></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
