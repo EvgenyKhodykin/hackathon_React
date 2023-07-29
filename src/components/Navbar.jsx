@@ -11,8 +11,7 @@ function Navbar() {
                         className='img-fluid'
                         alt='reactLogo'
                         style={{
-                            width: '80px',
-                            height: '70px',
+                            width: '60px',
                             marginRight: '15px'
                         }}
                     />

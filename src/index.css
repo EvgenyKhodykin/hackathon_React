@@ -11,7 +11,14 @@
 }
 
 .navbar {
-    background-color: darkorange;
+    background-color: #fb6c1d;
+}
+
+.navbar ul li {
+    margin-bottom: 0;
+}
+.navbar ul li a {
+    color: white;
 }
 
 .breadcrumb-item {
@@ -25,11 +32,22 @@
 }
 
 .card-img-top {
+    background-size: cover;
+    background-position: 0% 30%;
     border-radius: 50%;
     width: 300px;
     height: 300px;
 }
 
 .card {
+    padding: 10px;
+}
+
+.card-body {
     width: 300px;
+}
+
+.card-navigate {
+    display: flex;
+    justify-content: space-between;
 }
