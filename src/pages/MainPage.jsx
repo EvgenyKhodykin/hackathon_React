@@ -7,7 +7,15 @@ function MainPage() {
         <>
             <Breadcrumbs />
             <div className='container-xl mt-5'>
-                <img src={result} alt='resultSchool' style={{ width: '300px', height: '300px' }} />
+                <a href='https://result.school/' title='Result School Link'>
+                    <img
+                        src={result}
+                        className='resultImage'
+                        alt='resultSchool'
+                        style={{ width: '300px', height: '300px' }}
+                    />
+                </a>
+
                 <p className='mt-5'>
                     Добро пожаловать на страницу 91-й группы курса Junior Frontend Developer в
                     ResultSchool! Здесь собралась команда единомышленников и, в первую очередь,
