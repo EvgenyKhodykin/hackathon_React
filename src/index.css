@@ -14,15 +14,22 @@
     background-color: darkorange;
 }
 
-.breadcrumb-not-active {
-    color: #cccccc;
+.breadcrumb-item {
+    text-decoration: none;
 }
 
-.breadcrumb-active {
-    color: #000000;
+.memberCards {
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
 }
 
-.breadcrumb-arrow {
-    margin-left: 10px;
-    margin-right: 10px;
+.card-img-top {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.card {
+    width: 300px;
 }

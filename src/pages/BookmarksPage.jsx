@@ -1,5 +1,12 @@
+import Breadcrumbs from '../components/Breadcrumbs'
+
 function BookmarksPage() {
-    return <h1>BookmarksPage</h1>
+    return (
+        <>
+            <Breadcrumbs />
+            <h1>BookmarksPage</h1>
+        </>
+    )
 }
 
 export default BookmarksPage

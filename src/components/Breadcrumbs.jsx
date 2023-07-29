@@ -1,40 +1,25 @@
-import { Link, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Breadcrumbs() {
-    const location = useLocation()
-
     return (
-        <nav className='m-2'>
-            <Link
-                to='/'
-                className={
-                    location.pathname === '/' ? 'breadcrumb-active' : 'breadcrumb-not-active'
-                }
-            >
-                Главная
-            </Link>
-            {'>'}
-            <Link
-                to='/team'
-                className={
-                    location.pathname.startsWith('/team')
-                        ? 'breadcrumb-active'
-                        : 'breadcrumb-not-active'
-                }
-            >
-                Команда
-            </Link>
-            {'>'}
-            <Link
-                to='/team/1'
-                className={
-                    location.pathname === '/products/1'
-                        ? 'breadcrumb-active'
-                        : 'breadcrumb-not-active'
-                }
-            >
-                Product 1
-            </Link>
+        <nav aria-label='breadcrumb' className='m-2'>
+            <ol className='breadcrumb'>
+                <li className='breadcrumb-item'>
+                    <NavLink to='/' className='breadcrumb-item' aria-current='page'>
+                        Главная
+                    </NavLink>
+                </li>
+                <li className='breadcrumb-item'>
+                    <NavLink to='/team' className='breadcrumb-item' aria-current='page'>
+                        Команда
+                    </NavLink>
+                </li>
+                <li className='breadcrumb-item'>
+                    <NavLink to='/bookmarks' className='breadcrumb-item' aria-current='page'>
+                        Избранное
+                    </NavLink>
+                </li>
+            </ol>
         </nav>
     )
 }
