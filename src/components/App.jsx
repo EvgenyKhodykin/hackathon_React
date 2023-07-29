@@ -6,11 +6,13 @@ import BookmarksPage from '../pages/BookmarksPage'
 import MemberPage from '../pages/MemberPage'
 import TeamPage from '../pages/TeamPage'
 import ProtectedRoute from './ProtectedRoute'
+import Breadcrumbs from './Breadcrumbs'
 
 function App() {
     return (
         <>
             <Navbar />
+            <Breadcrumbs />
             <Routes>
                 <Route path='/' element={<MainPage />} />
                 <Route path='team' element={<TeamLayout />}>
