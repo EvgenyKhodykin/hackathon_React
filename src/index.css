@@ -14,15 +14,6 @@
     background-color: darkorange;
 }
 
-.breadcrumb-not-active {
-    color: #cccccc;
-}
-
-.breadcrumb-active {
-    color: #000000;
-}
-
-.breadcrumb-arrow {
-    margin-left: 10px;
-    margin-right: 10px;
+.breadcrumb-item {
+    text-decoration: none;
 }
