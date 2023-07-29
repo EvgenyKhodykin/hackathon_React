@@ -6,7 +6,7 @@ const members = [
         _id: 'e33882167e2d43a0971c',
         name: 'Евгений Ходыкин',
         age: 35,
-        about: 'Крутой перец',
+        about: 'Ответственный душнила...',
         role: 'Team Leader',
         photo: {
             main: EvgenyPhotos.Emain,
@@ -17,7 +17,7 @@ const members = [
         _id: '78e6b4902884fb130fd7',
         name: 'Андрей Назаренко',
         age: 37,
-        about: 'Реальный кент',
+        about: 'Аka Гендальф серый...',
         role: 'Software Developer',
         photo: {
             main: AndreyPhotos.Amain,
