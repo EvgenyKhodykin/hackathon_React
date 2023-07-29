@@ -37,7 +37,7 @@ function MemberCard({ name, photo, age, role, about, _id }) {
         <div>
             <span className={`badge bg-${handleClassName(role)}`}>{role}</span>
             <div className='card'>
-                <img style={myStyle} className='card-img-top' alt='memberPhoto' />
+                <div style={myStyle} className='card-img-top' alt='memberPhoto'></div>
                 <div className='card-body'>
                     <h4 className='card-title'>{name}</h4>
                     <h6>{age} лет</h6>
