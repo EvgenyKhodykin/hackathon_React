@@ -3,7 +3,7 @@ import reactIcon from '../assets/images/reactIcon.png'
 
 function Navbar() {
     return (
-        <nav className='navbar navbar-expand-lg'>
+        <nav className='navbar sticky-top navbar-expand-lg'>
             <div className='container-fluid'>
                 <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                     <img

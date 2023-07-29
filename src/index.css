@@ -57,3 +57,10 @@ a {
     display: flex;
     justify-content: space-between;
 }
+
+.sticky-breadcrumbs {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    padding-left: 20px;
+}
