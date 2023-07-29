@@ -1,5 +1,5 @@
-// import EvgenyPhotos from '../assets/e33882167e2d43a0971c'
-// import AndreyPhotos from '../assets/78e6b4902884fb130fd7'
+import * as EvgenyPhotos from '../assets/e33882167e2d43a0971c'
+import * as AndreyPhotos from '../assets/78e6b4902884fb130fd7'
 
 const members = [
     {
@@ -9,12 +9,8 @@ const members = [
         about: 'Крутой перец',
         role: 'Team Leader',
         photo: {
-            main: '../assets/e33882167e2d43a0971c/main.jpg',
-            others: [
-                '../assets/e33882167e2d43a0971c/1.jpg',
-                '../assets/e33882167e2d43a0971c/2.JPG',
-                '../assets/e33882167e2d43a0971c/3.JPG'
-            ]
+            main: EvgenyPhotos.Emain,
+            others: [EvgenyPhotos.E1, EvgenyPhotos.E2, EvgenyPhotos.E3]
         }
     },
     {
@@ -24,12 +20,8 @@ const members = [
         about: 'Реальный кент',
         role: 'Software Developer',
         photo: {
-            main: '../assets/78e6b4902884fb130fd7/main.jpg',
-            others: [
-                '../assets/78e6b4902884fb130fd7/1.jpg',
-                '../assets/78e6b4902884fb130fd7/2.jpg',
-                '../assets/78e6b4902884fb130fd7/3.jpg'
-            ]
+            main: AndreyPhotos.Amain,
+            others: [AndreyPhotos.A1, AndreyPhotos.A2, AndreyPhotos.A3]
         }
     }
 ]
