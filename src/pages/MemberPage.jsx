@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import API from '../mockData/members.api'
 import Slider from '../components/Slider'
 import Loading from '../components/Loading'
+import Progress from '../components/Progress'
 
 function MemberPage() {
     const { userId } = useParams()
@@ -16,12 +17,13 @@ function MemberPage() {
         return (
             <div className='container' style={{ display: 'flex' }}>
                 <Slider userId={userId} />
-                <div className='card mx-2'>
+                <div className='card mx-5' style={{ height: '600px', width: '500px' }}>
                     <div
                         className='card'
                         style={{
                             display: 'flex',
-                            flexDirection: 'row'
+                            flexDirection: 'row',
+                            justifyContent: 'center'
                         }}
                     >
                         <div
@@ -50,6 +52,9 @@ function MemberPage() {
                             <p className='card-title'>{user.about}</p>
                             <p className='card-title'>{user.role}</p>
                         </div>
+                    </div>
+                    <div className='card mt-5'>
+                        <Progress />
                     </div>
                 </div>
             </div>
