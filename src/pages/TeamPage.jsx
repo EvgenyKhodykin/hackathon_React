@@ -13,7 +13,7 @@ function TeamPage() {
     if (team.length > 0) {
         return (
             <div className='container-xl mt-5'>
-                <h5>Давайте знакомиться с разработчиками нашей группы:</h5>
+                <h4>Давайте знакомиться с разработчиками нашей группы:</h4>
                 <div className='memberCards mt-5'>
                     {team.map(member => (
                         <MemberCard key={member._id} {...member} />

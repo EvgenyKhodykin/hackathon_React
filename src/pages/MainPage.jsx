@@ -4,22 +4,22 @@ import result from '../assets/images/result.jpg'
 function MainPage() {
     return (
         <div className='container-xl mt-5'>
-            <a href='https://result.school/' title='link to ResulSchool page'>
-                <img
-                    src={result}
-                    className='resultImage'
-                    alt='resultSchool'
-                    style={{ width: '300px', height: '300px' }}
-                />
-            </a>
+            <img
+                src={result}
+                className='resultImage'
+                alt='resultSchool'
+                style={{ width: '300px', height: '300px' }}
+            />
 
             <p className='mt-5'>
                 Добро пожаловать на страницу 91-й группы курса Junior Frontend Developer в &nbsp;
-                <a href='https://result.school/'>ResultSchool!</a> Здесь собралась команда
-                единомышленников и, в первую очередь, увлечённых web-разработкой людей. В рамках
-                данного практического задания мы постарались воплотить в проекте те знания, которые
-                кропотливо получали в течение многих месяцев. Переходи в раздел "Команда", чтобы
-                познакомиться с нами поближе :)
+                <a href='https://result.school/' target='blank'>
+                    ResultSchool!
+                </a>{' '}
+                Здесь собралась команда единомышленников и, в первую очередь, увлечённых
+                web-разработкой людей. В рамках данного практического задания мы постарались
+                воплотить в проекте те знания, которые кропотливо получали в течение многих месяцев.
+                Переходи в раздел "Команда", чтобы познакомиться с нами поближе :)
             </p>
             <br />
             <br />
