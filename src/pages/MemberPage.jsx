@@ -24,7 +24,6 @@ function MemberPage() {
                         <div className='col-8'></div>
                     </div>
                 </div>
-                {/* Techs */}
             </>
         )
     }
