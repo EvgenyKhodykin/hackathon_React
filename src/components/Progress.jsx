@@ -14,10 +14,7 @@ function Progress({ technologies }) {
                             <div
                                 className='progress-bar bg-danger'
                                 role='progressbar'
-                                style={{ width: '75%' }}
-                                aria-valuenow='20'
-                                aria-valuemin='0'
-                                aria-valuemax='100'
+                                style={{ width: `${technologies.html}%` }}
                             >
                                 {technologies.html}%
                             </div>
@@ -31,10 +28,7 @@ function Progress({ technologies }) {
                             <div
                                 className='progress-bar bg-success'
                                 role='progressbar'
-                                style={{ width: '50%' }}
-                                aria-valuenow='50'
-                                aria-valuemin='0'
-                                aria-valuemax='100'
+                                style={{ width: `${technologies.css}%` }}
                             >
                                 {technologies.css}%
                             </div>
@@ -48,7 +42,7 @@ function Progress({ technologies }) {
                             <div
                                 className='progress-bar bg-warning'
                                 role='progressbar'
-                                style={{ width: '50%' }}
+                                style={{ width: `${technologies.js}%` }}
                                 aria-valuenow='50'
                                 aria-valuemin='0'
                                 aria-valuemax='100'
@@ -65,7 +59,7 @@ function Progress({ technologies }) {
                             <div
                                 className='progress-bar bg-primary'
                                 role='progressbar'
-                                style={{ width: '25%' }}
+                                style={{ width: `${technologies.react}%` }}
                                 aria-valuenow='50'
                                 aria-valuemin='0'
                                 aria-valuemax='100'

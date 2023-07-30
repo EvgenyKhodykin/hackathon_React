@@ -7,19 +7,14 @@ import Loading from '../components/Loading'
 function BookmarksPage() {
     const [team, setTeam] = useState([])
     const [memberIds, setMemberIds] = useState()
-    const [favoriteList, setFavoriteList] = useState([])
+    // const [favoriteList, setFavoriteList] = useState([])
+    // const memberIds = favorites.get()
+    const favoriteList = team.filter(member => memberIds.includes(member._id))
 
     useEffect(() => {
         API.fetchAll().then(data => setTeam(data))
-    }, [])
-
-    useEffect(() => {
-        setFavoriteList(team.filter(member => memberIds.includes(member._id)))
-    }, [team, memberIds])
-
-    useEffect(() => {
         setMemberIds(favorites.get())
-    }, [favoriteList])
+    }, [])
 
     if (team.length > 0) {
         if (favoriteList.length > 0) {
