@@ -1,8 +1,24 @@
-# React + Vite
+# **Hackathon #2**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![react](https://img.shields.io/badge/React-18.2.0-blue)
+![vite](https://img.shields.io/badge/Vite-4.4.5-s)
+![bootstrap](https://img.shields.io/badge/Bootstrap-5.3.1-blueviolet)
+![router](https://img.shields.io/badge/React_Router_Dom-6.14.2-orange)
 
-Currently, two official plugins are available:
+![result](../hackathon_React/src/assets/images/result.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hackathon React task in [Result School](https://result.school/).
+
+## Installation
+
+Initialize the project witn `Yarn`
+
+```
+yarn
+```
+
+Or witn `npm`
+
+```
+npm install
+```
