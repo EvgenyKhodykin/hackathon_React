@@ -5,7 +5,7 @@
 ![bootstrap](https://img.shields.io/badge/Bootstrap-5.3.1-blueviolet)
 ![router](https://img.shields.io/badge/React_Router_Dom-6.14.2-orange)
 
-![result](../hackathon_React/src/assets/images/result.jpg)
+![result](/src/assets/images/result.jpg)
 
 Hackathon React task in [Result School](https://result.school/).
 
