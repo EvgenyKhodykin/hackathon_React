@@ -1,33 +1,33 @@
-import { NavLink } from 'react-router-dom'
-import reactIcon from '../assets/images/reactIcon.png'
+import { NavLink } from "react-router-dom"
+import reactIcon from "../assets/images/reactIcon.png"
 
 function Navbar() {
     return (
-        <nav className='navbar navbar-expand-lg'>
-            <div className='container-fluid'>
-                <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+        <nav className="navbar sticky-top navbar-expand-sm">
+            <div className="container-fluid">
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <img
                         src={reactIcon}
-                        className='img-fluid'
-                        alt='reactLogo'
+                        className="img-fluid"
+                        alt="reactLogo"
                         style={{
-                            width: '60px',
-                            marginRight: '15px'
+                            width: "60px",
+                            marginRight: "15px",
                         }}
                     />
-                    <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-                        <li className='nav-item h5'>
-                            <NavLink to='/' className='nav-link'>
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item h5">
+                            <NavLink to="/" className="nav-link">
                                 Главная
                             </NavLink>
                         </li>
-                        <li className='nav-item h5'>
-                            <NavLink to='team' className='nav-link' aria-current='page'>
+                        <li className="nav-item h5">
+                            <NavLink to="team" className="nav-link" aria-current="page">
                                 Команда
                             </NavLink>
                         </li>
-                        <li className='nav-item h5'>
-                            <NavLink to='bookmarks' className='nav-link' aria-current='page'>
+                        <li className="nav-item h5">
+                            <NavLink to="bookmarks" className="nav-link" aria-current="page">
                                 Избранное
                             </NavLink>
                         </li>
