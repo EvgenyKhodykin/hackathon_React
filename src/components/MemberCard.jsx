@@ -5,10 +5,6 @@ import favorites from "../utils/favorites"
 function MemberCard({ name, photo, age, role, about, _id }) {
     const [favoritesId, setFavoritesId] = useState()
 
-    const myStyle = {
-        backgroundImage: `url(${photo.main})`,
-    }
-
     const handleClassName = (role) => {
         return role === "Team Leader" ? "danger" : "success"
     }
@@ -42,7 +38,7 @@ function MemberCard({ name, photo, age, role, about, _id }) {
         <div>
             <span className={`badge bg-${handleClassName(role)}`}>{role}</span>
             <div className="card">
-                <div style={myStyle} className="card-img-top" alt="memberPhoto"></div>
+                <div style={{ backgroundImage: `url(${photo.main})` }} className="card-img-top" alt="memberPhoto"></div>
                 <div className="card-body">
                     <h4 className="card-title">{name}</h4>
                     <h6>{age} лет</h6>
