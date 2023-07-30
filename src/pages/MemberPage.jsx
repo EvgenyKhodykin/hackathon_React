@@ -4,6 +4,7 @@ import API from '../mockData/members.api'
 import Slider from '../components/Slider'
 import Loading from '../components/Loading'
 import Progress from '../components/Progress'
+import Socials from '../components/Socials'
 
 function MemberPage() {
     const { userId } = useParams()
@@ -16,8 +17,8 @@ function MemberPage() {
     if (user) {
         return (
             <div className='container' style={{ display: 'flex' }}>
-                <Slider userId={userId} />
-                <div className='card mx-5' style={{ height: '600px', width: '500px' }}>
+                <Slider {...user} />
+                <div className='card mx-4' style={{ height: '600px', width: '500px' }}>
                     <div
                         className='card'
                         style={{
@@ -55,6 +56,9 @@ function MemberPage() {
                     </div>
                     <div className='card mt-5'>
                         <Progress />
+                    </div>
+                    <div className='card mt-5'>
+                        <Socials />
                     </div>
                 </div>
             </div>
