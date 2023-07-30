@@ -46,7 +46,7 @@ a {
 
 .card {
     padding: 5px;
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 .card-body {

@@ -17,17 +17,16 @@ function MemberPage() {
     if (user) {
         return (
             <>
-                <h1>MemberPage</h1>
-                <div className="container">
+                <div className="container mt-5">
                     <div className="row justify-content-center">
                         <div className="col-4">
-                            <div className="card">
+                            {/* <div className="card"> */}
                                 <div
                                     style={{ backgroundImage: `url(${user.photo.main})` }}
                                     className="card-img-top"
                                     alt="memberPhoto"
                                 ></div>
-                            </div>
+                            {/* </div> */}
                         </div>
                         <div className="col-8">
                             <div className="card">{/* <Slider userId={userId} /> */}</div>
@@ -35,7 +34,7 @@ function MemberPage() {
                     </div>
                     <div className="row justify-content-center">
                         <div className="col-4">
-                            <div className="card">
+                            {/* <div className="card"> */}
                                 <table className="table">
                                     <tbody>
                                         <tr>
@@ -52,10 +51,10 @@ function MemberPage() {
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
+                            {/* </div> */}
                         </div>
                         <div className="col-4">
-                            <div className="card">
+                            {/* <div className="card"> */}
                                 <table className="table">
                                     <tbody>
                                         <tr>
@@ -72,10 +71,10 @@ function MemberPage() {
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
+                            {/* </div> */}
                         </div>
                         <div className="col-4">
-                            <div className="card">
+                            {/* <div className="card"> */}
                                 <div className="container">
                                     <div className="row justify-content-center">
                                         <div className="col-3">
@@ -131,7 +130,7 @@ function MemberPage() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            {/* </div> */}
                         </div>
                     </div>
                 </div>

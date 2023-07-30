@@ -5,8 +5,9 @@ import favorites from "../utils/favorites"
 
 function BookmarksPage() {
     const [team, setTeam] = useState([])
+    const [memberIds, setMemberIds] = useState()
     const [favoriteList, setFavoriteList] = useState([])
-    const memberIds = favorites.get()
+    // const memberIds = favorites.get()
 
     useEffect(() => {
         API.fetchAll().then((data) => setTeam(data))
@@ -16,7 +17,11 @@ function BookmarksPage() {
         setFavoriteList(team.filter((member) => memberIds.includes(member._id)))
     }, [team])
 
-    if (team) {
+    useEffect(() => {
+        setMemberIds(favorites.get())
+    }, [favoriteList])
+
+    if (team.length > 0) {
         if (favoriteList.length > 0) {
             return (
                 <div className="container-xl mt-5">
@@ -29,7 +34,7 @@ function BookmarksPage() {
             )
         }
         return (
-            <div class="alert alert-warning" role="alert">
+            <div className="alert alert-warning" role="alert">
                 Пока в избранном никого нет...
             </div>
         )
