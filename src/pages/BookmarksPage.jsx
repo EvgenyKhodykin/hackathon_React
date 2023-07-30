@@ -3,8 +3,10 @@ import API from '../mockData/members.api'
 import MemberCard from '../components/MemberCard'
 import favorites from '../utils/favorites'
 import Loading from '../components/Loading'
+import { useBookmarks } from '../hooks/useBookmarks'
 
 function BookmarksPage() {
+    const {bookmarks} = useBookmarks()
     const [team, setTeam] = useState([])
     const [memberIds, setMemberIds] = useState()
     // const [favoriteList, setFavoriteList] = useState([])
