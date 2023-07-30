@@ -1,66 +1,26 @@
-function Progress({ technologies }) {
+function Progress({ techs }) {
     return (
         <>
             <p style={{ textAlign: "center", textDecoration: "underline" }}>Освоенные технологии:</p>
             <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-3">
-                        <p className="technologies">HTML</p>
-                    </div>
-                    <div className="col-9">
-                        <div className="progress">
-                            <div
-                                className="progress-bar bg-danger"
-                                role="progressbar"
-                                style={{ width: `${technologies.html}%` }}
-                            >
-                                {technologies.html}%
+                {techs.map((tech, index) => (
+                    <div key={index} className="row justify-content-center">
+                        <div className="col-2">
+                            <p className="technologies">{tech.name}</p>
+                        </div>
+                        <div className="col-10">
+                            <div className="progress">
+                                <div
+                                    className={"progress-bar " + tech.color}
+                                    role="progressbar"
+                                    style={{ width: `${tech.progress}%` }}
+                                >
+                                    {tech.progress}%
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-3">
-                        <p className="technologies">CSS</p>
-                    </div>
-                    <div className="col-9">
-                        <div className="progress">
-                            <div
-                                className="progress-bar bg-success"
-                                role="progressbar"
-                                style={{ width: `${technologies.css}%` }}
-                            >
-                                {technologies.css}%
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-3">
-                        <p className="technologies">JavaScript</p>
-                    </div>
-                    <div className="col-9">
-                        <div className="progress">
-                            <div
-                                className="progress-bar bg-warning"
-                                role="progressbar"
-                                style={{ width: `${technologies.js}%` }}
-                            >
-                                {technologies.js}%
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-3">
-                        <p className="technologies">React</p>
-                    </div>
-                    <div className="col-9">
-                        <div className="progress">
-                            <div
-                                className="progress-bar bg-primary"
-                                role="progressbar"
-                                style={{ width: `${technologies.react}%` }}
-                            >
-                                {technologies.react}%
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                ))}
             </div>
         </>
     )

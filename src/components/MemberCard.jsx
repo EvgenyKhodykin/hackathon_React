@@ -44,7 +44,7 @@ function MemberCard({ name, photo, age, role, about, _id }) {
                         className="card-img-top"
                         alt="memberPhoto"
                     ></div>
-                </div>yy
+                </div>
                 <div className="card-body">
                     <h4 className="card-title">{name}</h4>
                     <h6>{age} лет</h6>

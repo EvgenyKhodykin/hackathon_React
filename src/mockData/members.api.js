@@ -8,12 +8,28 @@ const members = [
         age: 35,
         about: "Ответственный душнила...",
         role: "Team Leader",
-        technologies: {
-            html: 49,
-            css: 45,
-            js: 55,
-            react: 50,
-        },
+        techs: [
+            {
+                name: "HTML",
+                progress: 49,
+                color: "bg-danger",
+            },
+            {
+                name: "CSS",
+                progress: 45,
+                color: "bg-success",
+            },
+            {
+                name: "JavaScript",
+                progress: 55,
+                color: "bg-warning",
+            },
+            {
+                name: "React",
+                progress: 50,
+                color: "bg-primary",
+            },
+        ],
         photo: {
             main: EvgenyPhotos.Emain,
             others: [EvgenyPhotos.E1, EvgenyPhotos.E2, EvgenyPhotos.E3],
@@ -30,12 +46,28 @@ const members = [
         age: 37,
         about: "Решит любую свою же проблему...",
         role: "Software Developer",
-        technologies: {
-            html: 60,
-            css: 55,
-            js: 50,
-            react: 35,
-        },
+        techs: [
+            {
+                name: "HTML",
+                progress: 65,
+                color: "bg-danger",
+            },
+            {
+                name: "CSS",
+                progress: 55,
+                color: "bg-success",
+            },
+            {
+                name: "JavaScript",
+                progress: 30,
+                color: "bg-warning",
+            },
+            {
+                name: "React",
+                progress: 30,
+                color: "bg-primary",
+            },
+        ],
         photo: {
             main: AndreyPhotos.Amain,
             others: [AndreyPhotos.A1, AndreyPhotos.A2, AndreyPhotos.A3],

@@ -1,6 +1,6 @@
 function Slider({ photo }) {
     return (
-        <div className="col-6">
+        <div className="col-4 offset-1">
             <div className="card">
                 <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">

@@ -17,7 +17,7 @@ function MemberPage() {
     if (user) {
         return (
             <div className="container mt-5" style={{ display: "flex", justifyContent: "center" }}>
-                <div class="row">
+                <div className="row">
                     <Slider {...user} />
                     <div className="col-6">
                         <div
@@ -55,10 +55,10 @@ function MemberPage() {
                                 <p className="card-title">{user.role}</p>
                             </div>
                         </div>
-                        <div className="card mt-5">
+                        <div className="card">
                             <Progress {...user} />
                         </div>
-                        <div className="card mt-5">
+                        <div className="card">
                             <Socials />
                         </div>
                     </div>
