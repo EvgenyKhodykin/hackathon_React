@@ -9,7 +9,7 @@ function MemberPage() {
 
     useEffect(() => {
         API.getById(userId).then(data => setUser(data))
-    }, [])
+    }, [userId])
 
     if (user) {
         return (

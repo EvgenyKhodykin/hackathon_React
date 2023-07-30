@@ -46,7 +46,6 @@ a {
 
 .card {
     padding: 5px;
-    /* margin: 5px; */
 }
 
 .card-body {
@@ -70,5 +69,5 @@ a {
 }
 
 .slider {
-    width: 300px;
+    width: 500px;
 }
