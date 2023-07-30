@@ -1,15 +1,6 @@
-import { useEffect, useState } from 'react'
-import API from '../mockData/members.api'
-
-function Slider({ userId }) {
-    const [user, setUser] = useState()
-
-    useEffect(() => {
-        API.getById(userId).then(data => setUser(data))
-    }, [userId])
-
-    if (user) {
-        return (
+function Slider({ photo }) {
+    return (
+        <div className='card'>
             <div className='slider'>
                 <div
                     id='carouselExampleControls'
@@ -17,7 +8,7 @@ function Slider({ userId }) {
                     data-bs-ride='carousel'
                 >
                     <div className='carousel-inner'>
-                        {user.photo.others.map((photo, index) => (
+                        {photo.others.map((photo, index) => (
                             <div
                                 key={index}
                                 className={index === 0 ? 'carousel-item active' : 'carousel-item'}
@@ -46,9 +37,8 @@ function Slider({ userId }) {
                     </button>
                 </div>
             </div>
-        )
-    }
-    return 'Loading...'
+        </div>
+    )
 }
 
 export default Slider
