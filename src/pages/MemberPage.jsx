@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import API from '../mockData/members.api'
 import Slider from '../components/Slider'
 import Loading from '../components/Loading'
@@ -9,6 +9,8 @@ import Socials from '../components/Socials'
 function MemberPage() {
     const { userId } = useParams()
     const [user, setUser] = useState()
+    const { pathname } = useLocation()
+    console.log(pathname)
 
     useEffect(() => {
         API.getById(userId).then(data => setUser(data))
@@ -55,7 +57,7 @@ function MemberPage() {
                         </div>
                     </div>
                     <div className='card mt-5'>
-                        <Progress />
+                        <Progress {...user} />
                     </div>
                     <div className='card mt-5'>
                         <Socials />
