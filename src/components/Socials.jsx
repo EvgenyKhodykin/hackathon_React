@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Socials() {
     return (
         <>
@@ -6,15 +8,15 @@ function Socials() {
             </p>
             <div className='container'>
                 <address className='socials'>
-                    <a href='https://t.me/Evgeny_Khodykin' target='_blank' rel='noreferrer'>
-                        <img src='./images/telegram.png' alt='telegram' />
-                    </a>
-                    <a href='https://vk.com/jhonny_ist' target='_blank' rel='noreferrer'>
-                        <img src='./images/vk.png' alt='vk' />
-                    </a>
-                    <a href='https://github.com/EvgenyKhodykin' target='_blank' rel='noreferrer'>
-                        <img src='./images/github.png' alt='github' />
-                    </a>
+                    <Link to='https://t.me' target='blank'>
+                        <i className='bi bi-telegram'></i>
+                    </Link>
+                    <Link to='https://linkedin.com' target='blank'>
+                        <i className='bi bi-linkedin'></i>
+                    </Link>
+                    <Link to='https://github.com' target='blank'>
+                        <i className='bi bi-github'></i>
+                    </Link>
                 </address>
             </div>
         </>

@@ -77,6 +77,6 @@ a {
     justify-content: space-around;
     width: 100%;
 }
-.socials img {
-    scale: 0.6;
+.socials i {
+    font-size: 3em;
 }
