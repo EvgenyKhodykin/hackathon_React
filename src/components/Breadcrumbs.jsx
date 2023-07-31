@@ -4,8 +4,8 @@ function Breadcrumbs() {
     const location = useLocation()
 
     return (
-        <nav aria-label="breadcrumb" className="sticky-breadcrumbs">
-            <div className="container-fluid">
+        <div className="container-fluid mt-2">
+            <nav aria-label="breadcrumb" className="sticky-breadcrumbs">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item">
                         <NavLink to="/" className="breadcrumb-item" aria-current="page">
@@ -41,8 +41,8 @@ function Breadcrumbs() {
                         </li>
                     )}
                 </ol>
-            </div>
-        </nav>
+            </nav>
+        </div>
     )
 }
 
