@@ -1,21 +1,20 @@
+function set() {
+    const favorites = localStorage.setItem("favorites", JSON.stringify([]))
+    return favorites
+}
+
 function get() {
     const favorites = JSON.parse(localStorage.getItem("favorites"))
     return favorites
 }
+
 function add(id) {
-    let idArray = []
-    if (!localStorage.getItem("favorites")) {
-        localStorage.setItem("favorites", "")
-        idArray.push(id)
-        localStorage.setItem("favorites", JSON.stringify(idArray))
-    } else {
-        idArray = JSON.parse(localStorage.getItem("favorites"))
-        idArray.push(id)
-        localStorage.setItem("favorites", JSON.stringify(idArray))
-    }
-    const favorites = localStorage.getItem("favorites")
-    return favorites
+    const idArray = JSON.parse(localStorage.getItem("favorites"))
+    idArray.push(id)
+    localStorage.setItem("favorites", JSON.stringify(idArray))
+    return idArray
 }
+
 function remove(id) {
     const idArray = JSON.parse(localStorage.getItem("favorites"))
     const newIdArray = idArray.filter((bookmark) => bookmark !== id)
@@ -24,6 +23,7 @@ function remove(id) {
 }
 
 const localStorageService = {
+    set,
     get,
     add,
     remove,
