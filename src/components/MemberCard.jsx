@@ -1,34 +1,30 @@
-import { useState } from "react"
 import { Link } from "react-router-dom"
-import favorites from "../utils/favorites"
+import { useBookmarks } from "../hooks/useBookmarks"
 
 function MemberCard({ name, photo, age, role, about, _id }) {
-    const [, setFavoritesId] = useState()
-
+    const { bookmarks, getBookmarks, addBookmark, removeBookmark } = useBookmarks()
     const handleClassName = (role) => {
         return role === "Team Leader" ? "danger" : "success"
     }
 
     const handleToggleBookmark = (id) => {
-        const favoritesIds = favorites.get()
         let isIdExist = false
-        if (favoritesIds) {
-            isIdExist = favoritesIds.includes(id)
+        if (bookmarks) {
+            isIdExist = bookmarks.includes(id)
         }
         if (!isIdExist) {
-            favorites.add(id)
-            setFavoritesId(favorites.get())
+            addBookmark(id)
+            // setFavoritesId(favorites.get())
         } else {
-            favorites.remove(id)
-            setFavoritesId(favorites.get())
+            removeBookmark(id)
+            // setFavoritesId(favorites.get())
         }
     }
 
     const handleBookmarkClassName = (id) => {
-        const favoritesIds = favorites.get()
         let isIdExist = false
-        if (favoritesIds) {
-            isIdExist = favoritesIds.includes(id)
+        if (bookmarks) {
+            isIdExist = bookmarks.includes(id)
         }
         if (!isIdExist) return "bi bi-bookmark"
         return "bi bi-bookmark-check"
@@ -38,13 +34,7 @@ function MemberCard({ name, photo, age, role, about, _id }) {
         <div>
             <span className={`badge bg-${handleClassName(role)}`}>{role}</span>
             <div className="card">
-                <div className="card-top">
-                    <div
-                        style={{ backgroundImage: `url(${photo.main})` }}
-                        className="card-img-top"
-                        alt="memberPhoto"
-                    ></div>
-                </div>
+                <div style={{ backgroundImage: `url(${photo.main})` }} className="card-img-top" alt="memberPhoto"></div>
                 <div className="card-body">
                     <h4 className="card-title">{name}</h4>
                     <h6>{age} лет</h6>
