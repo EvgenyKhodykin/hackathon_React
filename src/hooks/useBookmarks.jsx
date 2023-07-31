@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import React, { useContext, useState } from "react"
 import localStorageService from "../services/localStorage.service"
 
 const BookmarksContext = React.createContext()
@@ -9,13 +8,7 @@ export const useBookmarks = () => {
 }
 
 export const BookmarksProvider = ({ children }) => {
-    // const { userId } = useParams()
     const [bookmarks, setBookmarks] = useState([])
-
-    useEffect(() => {
-        localStorageService.set()
-        getBookmarks()
-    }, [])
 
     function getBookmarks() {
         const data = localStorageService.get()
@@ -28,7 +21,7 @@ export const BookmarksProvider = ({ children }) => {
     }
 
     function removeBookmark(id) {
-        const data = localStorageService.removeComment(id)
+        const data = localStorageService.remove(id)
         setBookmarks(data)
     }
 

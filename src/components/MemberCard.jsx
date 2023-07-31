@@ -13,7 +13,7 @@ function MemberCard({ name, photo, age, role, about, _id }) {
 
     const handleToggleBookmark = (id) => {
         let isIdExist = false
-        if (favoritesIds) {
+        if (bookmarks) {
             isIdExist = bookmarks.includes(id)
         }
         if (!isIdExist) {
@@ -27,7 +27,7 @@ function MemberCard({ name, photo, age, role, about, _id }) {
 
     const handleBookmarkClassName = (id) => {
         let isIdExist = false
-        if (favoritesIds) {
+        if (bookmarks) {
             isIdExist = bookmarks.includes(id)
         }
         if (!isIdExist) return "bi bi-bookmark"

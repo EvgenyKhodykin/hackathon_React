@@ -1,7 +1,3 @@
-function set() {
-    localStorage.setItem("favorites", "")
-}
-
 function get() {
     const favorites = JSON.parse(localStorage.getItem("favorites"))
     return favorites
@@ -28,7 +24,6 @@ function remove(id) {
 }
 
 const localStorageService = {
-    set,
     get,
     add,
     remove,
