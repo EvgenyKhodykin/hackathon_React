@@ -1,12 +1,8 @@
-// import { useState } from "react"
 import { Link } from "react-router-dom"
-// import favorites from "../utils/favorites"
 import { useBookmarks } from "../hooks/useBookmarks"
 
 function MemberCard({ name, photo, age, role, about, _id }) {
-    // const [, setFavoritesId] = useState()
     const { bookmarks, getBookmarks, addBookmark, removeBookmark } = useBookmarks()
-
     const handleClassName = (role) => {
         return role === "Team Leader" ? "danger" : "success"
     }

@@ -41,11 +41,16 @@ a {
     background-size: cover;
     background-position: 0% 30%;
     border-radius: 50%;
-    height: 300px;
+    height: 100%;
 }
 
 .card {
     padding: 5px;
+    margin: 10px 0;
+}
+
+.card-top {
+    height: 300px;
 }
 
 .card-body {
@@ -68,15 +73,16 @@ a {
     font-size: 12px;
 }
 
-.slider {
+/* .slider {
     width: 500px;
-}
+} */
 
 .socials {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
+
 .socials i {
     font-size: 3em;
 }
