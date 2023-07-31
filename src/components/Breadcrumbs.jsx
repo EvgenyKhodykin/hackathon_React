@@ -1,7 +1,9 @@
 import { NavLink, useLocation } from "react-router-dom"
+// import { useBreadcrumbs } from "../hooks/useBreadcrumbs"
 
 function Breadcrumbs() {
     const location = useLocation()
+    // const { member, isLoading } = useBreadcrumbs()
 
     return (
         <div className="container-fluid mt-2">
@@ -19,6 +21,13 @@ function Breadcrumbs() {
                             </NavLink>
                         </li>
                     )}
+                    {/* {!isLoading && (
+                        <li className="breadcrumb-item">
+                            <NavLink to="/team" className="breadcrumb-item" aria-current="page">
+                                {member.name}
+                            </NavLink>
+                        </li>
+                    )} */}
                     {location.pathname.includes("team/e33882167e2d43a0971c") && (
                         <li className="breadcrumb-item">
                             <NavLink to="/team" className="breadcrumb-item" aria-current="page">
