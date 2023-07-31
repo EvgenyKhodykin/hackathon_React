@@ -11,13 +11,13 @@ Hackathon React task in [Result School](https://result.school/).
 
 ## Installation
 
-Initialize the project witn `Yarn`
+Initialize the project with `Yarn`
 
 ```
 yarn
 ```
 
-Or witn `npm`
+Or with `npm`
 
 ```
 npm install
