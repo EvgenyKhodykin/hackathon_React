@@ -1,13 +1,19 @@
+import { useEffect, useState } from "react"
 import { NavLink, useLocation } from "react-router-dom"
-// import { useBreadcrumbs } from "../hooks/useBreadcrumbs"
+import API from "../mockData/members.api"
 
 function Breadcrumbs() {
     const location = useLocation()
-    // const { member, isLoading } = useBreadcrumbs()
+    const endOfPath = location.pathname.split("/").pop()
+    const [member, setMember] = useState()
+
+    useEffect(() => {
+        API.getById(endOfPath).then((data) => setMember(data))
+    }, [endOfPath])
 
     return (
         <div className="container-fluid mt-2">
-            <nav aria-label="breadcrumb" className="sticky-breadcrumbs">
+            <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item">
                         <NavLink to="/" className="breadcrumb-item" aria-current="page">
@@ -21,24 +27,10 @@ function Breadcrumbs() {
                             </NavLink>
                         </li>
                     )}
-                    {/* {!isLoading && (
+                    {!!member && (
                         <li className="breadcrumb-item">
                             <NavLink to="/team" className="breadcrumb-item" aria-current="page">
                                 {member.name}
-                            </NavLink>
-                        </li>
-                    )} */}
-                    {location.pathname.includes("team/e33882167e2d43a0971c") && (
-                        <li className="breadcrumb-item">
-                            <NavLink to="/team" className="breadcrumb-item" aria-current="page">
-                                Евгений Ходыкин
-                            </NavLink>
-                        </li>
-                    )}
-                    {location.pathname.includes("team/78e6b4902884fb130fd7") && (
-                        <li className="breadcrumb-item">
-                            <NavLink to="/team" className="breadcrumb-item" aria-current="page">
-                                Андрей Назаренко
                             </NavLink>
                         </li>
                     )}

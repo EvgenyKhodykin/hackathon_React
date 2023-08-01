@@ -8,28 +8,25 @@ import TeamPage from "../pages/TeamPage"
 import ProtectedRoute from "./ProtectedRoute"
 import Breadcrumbs from "./Breadcrumbs"
 import { BookmarksProvider } from "../hooks/useBookmarks"
-import { BreadcrumbsProvider } from "../hooks/useBreadcrumbs"
 
 function App() {
     return (
         <>
             <Navbar />
-            <BreadcrumbsProvider>
-                <Breadcrumbs />
-                <BookmarksProvider>
-                    <Routes>
-                        <Route path="/" element={<MainPage />} />
-                        <Route path="team" element={<TeamLayout />}>
-                            <Route index element={<TeamPage />} />
-                            <Route element={<ProtectedRoute />}>
-                                <Route path=":userId" element={<MemberPage />} />
-                            </Route>
+            <Breadcrumbs />
+            <BookmarksProvider>
+                <Routes>
+                    <Route path="/" element={<MainPage />} />
+                    <Route path="team" element={<TeamLayout />}>
+                        <Route index element={<TeamPage />} />
+                        <Route element={<ProtectedRoute />}>
+                            <Route path=":userId" element={<MemberPage />} />
                         </Route>
-                        <Route path="bookmarks" element={<BookmarksPage />} />
-                        <Route path="*" element={<Navigate to="/" />} />
-                    </Routes>
-                </BookmarksProvider>
-            </BreadcrumbsProvider>
+                    </Route>
+                    <Route path="bookmarks" element={<BookmarksPage />} />
+                    <Route path="*" element={<Navigate to="/" />} />
+                </Routes>
+            </BookmarksProvider>
         </>
     )
 }
