@@ -80,9 +80,9 @@ const members = [
     },
 ]
 
-// if (!localStorage.getItem('members')) {
-//     localStorage.setItem('members', JSON.stringify(members))
-// }
+if (!localStorage.getItem('favorites')) {
+    localStorage.setItem("favorites", JSON.stringify([]))
+}
 
 const fetchAll = () =>
     new Promise((resolve) => {

@@ -1,46 +1,49 @@
-import { NavLink, useLocation } from 'react-router-dom'
+import { useEffect, useState } from "react"
+import { NavLink, useLocation } from "react-router-dom"
+import API from "../mockData/members.api"
 
 function Breadcrumbs() {
     const location = useLocation()
+    const endOfPath = location.pathname.split("/").pop()
+    const [member, setMember] = useState()
+
+    useEffect(() => {
+        API.getById(endOfPath).then((data) => setMember(data))
+    }, [endOfPath])
 
     return (
-        <nav aria-label='breadcrumb' className='sticky-breadcrumbs'>
-            <ol className='breadcrumb'>
-                <li className='breadcrumb-item'>
-                    <NavLink to='/' className='breadcrumb-item' aria-current='page'>
-                        Главная
-                    </NavLink>
-                </li>
-                {location.pathname.includes('team') && (
-                    <li className='breadcrumb-item'>
-                        <NavLink to='/team' className='breadcrumb-item' aria-current='page'>
-                            Команда
+        <div className="container-fluid mt-2">
+            <nav aria-label="breadcrumb">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item">
+                        <NavLink to="/" className="breadcrumb-item" aria-current="page">
+                            Главная
                         </NavLink>
                     </li>
-                )}
-                {location.pathname.includes('team/e33882167e2d43a0971c') && (
-                    <li className='breadcrumb-item'>
-                        <NavLink to='/team' className='breadcrumb-item' aria-current='page'>
-                            Евгений Ходыкин
-                        </NavLink>
-                    </li>
-                )}
-                {location.pathname.includes('team/78e6b4902884fb130fd7') && (
-                    <li className='breadcrumb-item'>
-                        <NavLink to='/team' className='breadcrumb-item' aria-current='page'>
-                            Андрей Назаренко
-                        </NavLink>
-                    </li>
-                )}
-                {location.pathname.includes('bookmarks') && (
-                    <li className='breadcrumb-item'>
-                        <NavLink to='/bookmarks' className='breadcrumb-item' aria-current='page'>
-                            Избранное
-                        </NavLink>
-                    </li>
-                )}
-            </ol>
-        </nav>
+                    {location.pathname.includes("team") && (
+                        <li className="breadcrumb-item">
+                            <NavLink to="/team" className="breadcrumb-item" aria-current="page">
+                                Команда
+                            </NavLink>
+                        </li>
+                    )}
+                    {!!member && (
+                        <li className="breadcrumb-item">
+                            <NavLink to="/team" className="breadcrumb-item" aria-current="page">
+                                {member.name}
+                            </NavLink>
+                        </li>
+                    )}
+                    {location.pathname.includes("bookmarks") && (
+                        <li className="breadcrumb-item">
+                            <NavLink to="/bookmarks" className="breadcrumb-item" aria-current="page">
+                                Избранное
+                            </NavLink>
+                        </li>
+                    )}
+                </ol>
+            </nav>
+        </div>
     )
 }
 

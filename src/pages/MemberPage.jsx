@@ -16,7 +16,7 @@ function MemberPage() {
 
     if (user) {
         return (
-            <div className="container mt-5" style={{ display: "flex", justifyContent: "center" }}>
+            <div className="container mt-5">
                 <div className="row">
                     <Slider {...user} />
                     <div className="col-6">

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import localStorageService from "../services/localStorage.service"
 
 const BookmarksContext = React.createContext()
@@ -9,6 +9,10 @@ export const useBookmarks = () => {
 
 export const BookmarksProvider = ({ children }) => {
     const [bookmarks, setBookmarks] = useState([])
+
+    useEffect(() => {
+        getBookmarks()
+    }, [])
 
     function getBookmarks() {
         const data = localStorageService.get()
