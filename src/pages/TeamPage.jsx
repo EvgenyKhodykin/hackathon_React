@@ -1,21 +1,21 @@
-import { useEffect, useState } from "react"
-import API from "../mockData/members.api"
-import MemberCard from "../components/MemberCard"
-import Loading from "../components/Loading"
+import { useEffect, useState } from 'react'
+import API from '../mockData/members.api'
+import MemberCard from '../components/MemberCard'
+import Loading from '../components/UI/Loading'
 
 function TeamPage() {
     const [team, setTeam] = useState([])
 
     useEffect(() => {
-        API.fetchAll().then((data) => setTeam(data))
+        API.fetchAll().then(data => setTeam(data))
     }, [])
 
     if (team.length > 0) {
         return (
-            <div className="container-xl mt-5">
+            <div className='container-xl mt-5'>
                 <h4>Давайте знакомиться с разработчиками нашей группы:</h4>
-                <div className="memberCards mt-5">
-                    {team.map((member) => (
+                <div className='memberCards mt-5'>
+                    {team.map(member => (
                         <MemberCard key={member._id} {...member} />
                     ))}
                 </div>
